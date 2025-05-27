@@ -1,83 +1,280 @@
-<!DOCTYPE html>
+
+    
+ 
+     
+
+  
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meka Madhavi | Java Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meka Madhavi | Portfolio</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    a {
+      color: #2a8df4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 2px solid #2a8df4;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    section {
+      margin: 40px 0;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2a8df4;
+      border-bottom: 3px solid #2a8df4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* About */
+    #about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Skills */
+    #skills ul {
+      list-style: none;
+      columns: 2;
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    #skills ul li {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+    }
+    #skills ul li::before {
+      content: "✔";
+      color: #2a8df4;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Experience, Education, Achievements */
+    #experience article,
+    #education article,
+    #achievements article {
+      background: #fff;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.05);
+      border-radius: 6px;
+    }
+    #experience article h3,
+    #education article h3,
+    #achievements article h3 {
+      color: #2a8df4;
+      margin-bottom: 5px;
+    }
+    #experience article time,
+    #education article time {
+      font-size: 0.9rem;
+      color: #888;
+      display: block;
+      margin-bottom: 10px;
+    }
+    #experience article ul {
+      list-style: disc inside;
+      color: #555;
+    }
+
+    /* Projects */
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    #projects article {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    #projects article:hover {
+      transform: translateY(-5px);
+    }
+    #projects img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 180px;
+    }
+    #projects article .content {
+      padding: 15px 20px;
+    }
+    #projects article h3 {
+      margin-bottom: 8px;
+      color: #2a8df4;
+    }
+    #projects article p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    #projects article a {
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin: 50px 0 20px 0;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      #skills ul {
+        columns: 1;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Meka Madhavi</h1>
-    <p>Java Developer | Spring Boot | Microservices | AWS</p>
-    <p>Email: <a href="mailto:mekamadhavi1@gmail.com">mekamadhavi1@gmail.com</a> | 📞 6303777941</p>
+    <p>Java Developer | Microservices | Cloud Deployment</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Detail-oriented and skilled Java Developer with hands-on experience in payment integration, microservices architecture, and cloud deployment. Awarded for high-quality and timely solutions.</p>
+    <p>
+      Detail-oriented and highly skilled Java Developer with hands-on experience in payment integration, microservices architecture, and cloud deployment. Proven ability to design and develop secure and robust applications using Spring Boot and AWS. Awarded for exceptional performance in delivering high-quality solutions on time.
+    </p>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
     <ul>
-      <li>Languages: Java</li>
-      <li>Frameworks: Spring Boot, Spring Security, Spring JDBC</li>
-      <li>Architecture: Microservices</li>
-      <li>APIs: RESTful, Postman</li>
-      <li>Databases: MySQL</li>
-      <li>Cloud: AWS (EC2, RDS, Secret Manager)</li>
-      <li>Tools: Git, Maven, ActiveMQ, Redis, Log4J, Eclipse</li>
+      <li>Java, Spring Boot, Spring Security</li>
+      <li>Microservices Architecture</li>
+      <li>RESTful APIs (JSON, Postman, CURL)</li>
+      <li>MySQL, Redis, ActiveMQ</li>
+      <li>AWS EC2, RDS, Secret Manager</li>
+      <li>JUnit, Mockito, Unit Testing</li>
+      <li>Git, BitBucket, Maven</li>
+      <li>Scrum, Agile, Jira</li>
     </ul>
   </section>
 
   <section id="experience">
     <h2>Professional Experience</h2>
 
-    <h3>Java Developer Intern – HulkHire Tech (May 2024 – Aug 2024)</h3>
-    <ul>
-      <li>Built secure payment integrations with Stripe and Trustly.</li>
-      <li>Implemented HMACSHA256, RSA for secure communication.</li>
-      <li>Used ActiveMQ and Redis for async messaging and caching.</li>
-    </ul>
+    <article>
+      <h3>Java Developer Intern - HulkHire Tech, Hyderabad</h3>
+      <time>May 2024 – August 2024</time>
+      <ul>
+        <li>Developed secure payment systems integrating Stripe and Trustly using Spring Boot.</li>
+        <li>Implemented REST APIs and secured communication using Spring Security with HMACSHA256 and RSA.</li>
+        <li>Designed modular services with Factory and Builder design patterns.</li>
+        <li>Integrated ActiveMQ for async messaging and used AWS (EC2, RDS, Secret Manager) for deployment.</li>
+        <li>Implemented Redis caching for performance improvement.</li>
+        <li>Worked in Agile environment, contributing to sprint goals and timely delivery.</li>
+      </ul>
+    </article>
 
-    <h3>Freelance Java Developer (Sept 2024 – Present)</h3>
-    <ul>
-      <li>Developed modular Spring Boot microservices using REST APIs.</li>
-      <li>Integrated Gemini API in a Smart Email Assistant project.</li>
-    </ul>
+    <article>
+      <h3>Freelance Java Developer</h3>
+      <time>September 2024 – Present</time>
+      <ul>
+        <li>Built and deployed Java Spring Boot microservices-based backend systems.</li>
+        <li>Integrated Redis, ActiveMQ, and secure token-based authentication.</li>
+        <li>Deployed projects on AWS infrastructure (EC2, RDS, Secret Manager).</li>
+      </ul>
+      <strong>Project: Smart Email Assistant</strong>
+      <ul>
+        <li>Created AI-powered email assistant using Spring Boot and Gemini AI API for NLP.</li>
+        <li>Implemented REST endpoints and deployed on AWS EC2.</li>
+      </ul>
+    </article>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
 
-    <h3>Expense Tracker</h3>
-    <p><a href="https://github.com/madhu553/Expenses" target="_blank">GitHub Link</a></p>
-    <ul>
-      <li>REST APIs to track and manage transactions.</li>
-      <li>Monthly summary and CSV upload support.</li>
-    </ul>
+    <article>
+      <img src="https://via.placeholder.com/400x180?text=Expense+Tracker" alt="Expense Tracker Project Screenshot" />
+      <div class="content">
+        <h3>Expense Tracker</h3>
+        <p>Java Spring Boot REST APIs for adding and fetching transactions, monthly summary feature, CSV file upload support.</p>
+        <a href="https://github.com/madhu553/Expenses" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
 
-    <h3>Smart Email Assistant</h3>
-    <ul>
-      <li>Spring Boot + Spring AI integration with Gemini API for AI-generated emails.</li>
-    </ul>
+    <article>
+      <img src="https://via.placeholder.com/400x180?text=Smart+Email+Assistant" alt="Smart Email Assistant Screenshot" />
+      <div class="content">
+        <h3>Smart Email Assistant</h3>
+        <p>AI-powered email assistant built using Spring Boot and Gemini AI API for NLP-based email generation.</p>
+        <a href="#" target="_blank" rel="noopener">View Project</a>
+      </div>
+    </article>
+
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <p>B.Tech in Computer Science – Malineni Lakshmaiah Women’s Engineering College (2014)</p>
+    <article>
+      <h3>Bachelor of Technology in Computer Science</h3>
+      <time>Malineni Lakshmaiah Women’s Engineering College, 2014</time>
+    </article>
   </section>
 
   <section id="achievements">
     <h2>Key Achievements</h2>
-    <ul>
-      <li>STAR Performer of the Month – Recognized for timely delivery and contribution to sprint goals.</li>
-    </ul>
+    <article>
+      <h3>STAR Performer of the Month</h3>
+      <p>Awarded for exceptional performance and timely delivery of tasks, aiding the team in meeting sprint deadlines.</p>
+    </article>
   </section>
 
   <footer>
-    <p>© 2025 Meka Madhavi. Built with 💻 and ☕</p>
+    <p>© 2025 Meka Madhavi. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
